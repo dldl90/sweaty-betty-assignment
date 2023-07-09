@@ -1,0 +1,115 @@
+$controlsBorderStyle: 1px solid #000000;
+
+.productList {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 24px 0 40px;
+
+  &__active {
+    span {
+      padding: 0 0 4px;
+      border-bottom: 1px solid;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    justify-content: flex-end;
+    flex-direction: row;
+    border-top: $controlsBorderStyle;
+    border-bottom: $controlsBorderStyle;
+
+    &__col {
+      margin: 16px 0;
+      flex: 0 0 auto;
+      flex-basis: 33.3333333%;
+      max-width: 33.3333333%;
+    }
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  border-top: $controlsBorderStyle;
+  border-bottom: $controlsBorderStyle;
+
+  > li {
+    text-align: center;
+    border-right: $controlsBorderStyle;
+    width: 100%;
+
+    &:first-child {
+      border-left: $controlsBorderStyle;
+    }
+  }
+
+  a {
+    padding: 24px 0;
+    display: block;
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: 768px) {
+    border-top: none;
+    border-bottom: none;
+  }
+}
+
+.pagination {
+  display: flex;
+  padding: 24px 16px 0;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+
+  &__pageControl {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+  }
+
+  button {
+    background: none;
+    padding: 4px 10px;
+    cursor: pointer;
+    border: none;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 0 16px 0 0;
+    width: auto;
+    justify-content: flex-end;
+  }
+}
+
+.arrow {
+  $arrowSize: 10px;
+  $arrowColor: #000000;
+
+  width: 0;
+  height: 0;
+  border-top: $arrowSize solid transparent;
+  border-bottom: $arrowSize solid transparent;
+  display: block;
+
+  &__right {
+    border-left: $arrowSize solid $arrowColor;
+  }
+
+  &__left {
+    border-right: $arrowSize solid $arrowColor;
+  }
+}
