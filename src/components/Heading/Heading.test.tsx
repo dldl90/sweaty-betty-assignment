@@ -5,6 +5,7 @@ const props = {
   title: "Test title",
   subtitle: "subtitle testing",
 };
+
 describe("<Heading />", () => {
   it("should display title with correct element", () => {
     render(<Heading {...props} />);

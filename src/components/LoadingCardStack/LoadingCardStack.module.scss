@@ -1,3 +1,5 @@
+@import "../../styles/breakpoints.scss";
+
 .loading {
   display: flex;
   flex-wrap: wrap;
@@ -12,7 +14,7 @@
     flex-basis: calc(50% - 16px);
     max-width: calc(50% - 16px);
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $breakpoint-min) {
       flex-basis: calc(33.3333333333% - 16px);
       max-width: calc(33.3333333333% - 16px);
     }

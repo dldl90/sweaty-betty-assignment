@@ -1,3 +1,5 @@
+@import "../../styles/breakpoints.scss";
+
 .container {
   width: 100%;
 }
@@ -29,7 +31,7 @@
     max-height: 250px;
     min-height: 100px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $breakpoint-min) {
       height: 23vw;
     }
   }

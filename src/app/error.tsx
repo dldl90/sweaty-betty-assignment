@@ -1,6 +1,6 @@
 "use client";
 
-const Error = ({ error }) => {
+const Error = ({ error }: { error: Error }) => {
   // Typically would log error through a client logger such as sentry, rollbar, elastic rum etc. For this exercise I am just console log error
   console.error(error);
   return (

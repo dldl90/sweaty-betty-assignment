@@ -54,12 +54,6 @@ describe("getProducts()", () => {
       });
     });
 
-    await expect(getProducts()).rejects.toEqual(
-      Error({
-        message: "Unable to get response",
-        status: 400,
-        error: "Bad request",
-      })
-    );
+    await expect(getProducts()).rejects.toEqual(Error("Unable to get request - status: 400"));
   });
 });

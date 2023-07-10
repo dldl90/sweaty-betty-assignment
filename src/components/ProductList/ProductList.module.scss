@@ -1,3 +1,5 @@
+@import "../../styles/breakpoints.scss";
+
 $controlsBorderStyle: 1px solid #000000;
 
 .productList {
@@ -22,7 +24,7 @@ $controlsBorderStyle: 1px solid #000000;
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $breakpoint-min) {
     justify-content: flex-end;
     flex-direction: row;
     border-top: $controlsBorderStyle;
@@ -63,7 +65,7 @@ $controlsBorderStyle: 1px solid #000000;
     cursor: pointer;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $breakpoint-min) {
     border-top: none;
     border-bottom: none;
   }
@@ -88,7 +90,7 @@ $controlsBorderStyle: 1px solid #000000;
     cursor: pointer;
     border: none;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $breakpoint-min) {
     padding: 0 16px 0 0;
     width: auto;
     justify-content: flex-end;

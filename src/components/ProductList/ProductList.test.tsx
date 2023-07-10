@@ -1,5 +1,5 @@
-import { getByRole, render, screen } from "@testing-library/react";
-import ProductList from "./ProductList";
+import { render, screen } from "@testing-library/react";
+import ProductList from "@/components/ProductList";
 
 const mockProducts = [
   {
@@ -41,7 +41,7 @@ describe("<ProductList />", () => {
   it("should display the first set of a list of products on first render", () => {
     render(<ProductList products={mockProducts} />);
 
-    const productTitle = (title) => screen.getByRole("heading", { level: 4, name: title });
+    const productTitle = (title: string) => screen.getByRole("heading", { level: 4, name: title });
 
     expect(productTitle("Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops")).toBeTruthy();
     expect(productTitle("Mens Casual Premium Slim Fit T-Shirts")).toBeTruthy();

@@ -1,11 +1,12 @@
 import { render, screen } from "@testing-library/react";
-import ProductCard from "./ProductCard";
+import ProductCard, { Product } from "./ProductCard";
 
-const props = {
+const props: Product = {
   id: 1,
   title: "test product",
   description: "Lorem ipsom",
   category: "Men's shoe",
+  price: 9.99,
   image: "https://www.google.com/img/logo.png",
   alt: "google image",
 };

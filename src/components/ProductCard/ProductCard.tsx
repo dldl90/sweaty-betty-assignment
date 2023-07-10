@@ -1,11 +1,21 @@
 "use client";
 import Image from "next/image";
-import PropTypes from "prop-types";
 import AddToFavourites from "@/components/AddToFavourites";
 
 import styles from "./ProductCard.module.scss";
+import { FC } from "react";
 
-const ProductCard = ({ id, title, description, category, image, alt }) => {
+export type Product = {
+  id: number;
+  title: string;
+  price: number;
+  description: string;
+  category: string;
+  image: string;
+  alt?: string;
+};
+
+const ProductCard: FC<Product> = ({ id, title, description, category, image, alt }) => {
   return (
     <div className={styles.product}>
       <div className={styles.image}>
@@ -26,19 +36,6 @@ const ProductCard = ({ id, title, description, category, image, alt }) => {
       <p className={styles.category}>{category}</p>
     </div>
   );
-};
-
-ProductCard.prototype = {
-  id: PropTypes.number,
-  title: PropTypes.string,
-  description: PropTypes.string,
-  category: PropTypes.string,
-  image: PropTypes.string,
-  alt: PropTypes.string,
-};
-
-ProductCard.defaultProps = {
-  alt: undefined,
 };
 
 export default ProductCard;

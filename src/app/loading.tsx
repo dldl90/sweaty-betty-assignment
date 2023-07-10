@@ -1,7 +1,7 @@
 import LoadingCardStack from "@/components/LoadingCardStack";
 import Heading from "@/components/Heading";
 
-export default () => {
+const Loading = () => {
   // You can add any UI inside Loading, including a Skeleton.
   return (
     <div>
@@ -14,3 +14,5 @@ export default () => {
     </div>
   );
 };
+
+export default Loading;
