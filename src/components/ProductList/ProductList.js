@@ -1,8 +1,9 @@
 "use client";
 
+import { Suspense } from "react";
+import PropTypes from "prop-types";
 import ProductCard from "@/components/ProductCard";
 import LoadingCardStack from "@/components/LoadingCardStack";
-import { Suspense } from "react";
 import styles from "./ProductList.module.scss";
 
 const ProductList = ({ products }) => {
@@ -56,6 +57,19 @@ const ProductList = ({ products }) => {
       </Suspense>
     </>
   );
+};
+
+ProductList.prototype = {
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      title: PropTypes.string,
+      price: PropTypes.number,
+      description: PropTypes.string,
+      category: PropTypes.string,
+      image: PropTypes.string,
+    })
+  ).isRequired,
 };
 
 export default ProductList;

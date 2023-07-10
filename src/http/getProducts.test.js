@@ -49,7 +49,7 @@ describe("getProducts()", () => {
     window.fetch = jest.fn().mockImplementation(() => {
       return Promise.reject({
         ok: false,
-        status: 404,
+        status: 400,
         error: "Bad request",
       });
     });
@@ -57,7 +57,7 @@ describe("getProducts()", () => {
     await expect(getProducts()).rejects.toEqual(
       Error({
         message: "Unable to get response",
-        status: 404,
+        status: 400,
         error: "Bad request",
       })
     );
