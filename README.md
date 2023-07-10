@@ -42,3 +42,6 @@ npm dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## screenshot of the application
+![localhost_3000_](https://github.com/dldl90/sweaty-betty-assignment/assets/19726361/5b7cbc91-ff46-45a9-a3f7-0587acfca403)
+![localhost_3000_ (1)](https://github.com/dldl90/sweaty-betty-assignment/assets/19726361/28f6c9a0-d8ba-485f-8e2b-a58b05baa35e)
+
